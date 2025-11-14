@@ -1,0 +1,36 @@
+From b3f493c96c4cedde3557b1f4a6cb4ae570cfc723 Mon Sep 17 00:00:00 2001
+From: Harald Sitter <sitter@kde.org>
+Date: Fri, 14 Nov 2025 23:56:49 +0100
+Subject: [PATCH] main: don't keep the engine as child of the app
+
+it causes crashes and is entirely pointless anyway. put it on the stack
+instead
+
+BUG: 512085
+---
+ src/main.cpp | 8 ++++----
+ 1 file changed, 4 insertions(+), 4 deletions(-)
+
+diff --git a/src/main.cpp b/src/main.cpp
+index 00e3946..8865838 100644
+--- a/src/main.cpp
++++ b/src/main.cpp
+@@ -46,11 +46,11 @@ int main(int argc, char **argv)
+ 
+     QApplication::setWindowIcon(QIcon::fromTheme(u"dragonplayer"_s));
+ 
+-    auto engine = new QQmlApplicationEngine(&app); // on the heap for code similarity reasons with other projects, technically not necessary.
+-    KLocalization::setupLocalizedContext(engine);
++    QQmlApplicationEngine engine;
++    KLocalization::setupLocalizedContext(&engine);
+ 
+-    engine->loadFromModule("org.kde.dragon", "Main");
+-    if (engine->rootObjects().isEmpty()) {
++    engine.loadFromModule("org.kde.dragon", "Main");
++    if (engine.rootObjects().isEmpty()) {
+         qWarning() << "Failed to load QML code. Note prior errors!";
+         abort();
+         return -1;
+-- 
+2.51.2
+
