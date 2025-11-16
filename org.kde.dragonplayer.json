@@ -14,7 +14,7 @@
     ],
     "modules": [
         {
-            "name": "org.kde.dragonplayer",
+            "name": "dragon",
             "buildsystem": "cmake-ninja",
             "config-opts": [
                 "-DCMAKE_BUILD_TYPE=RelWithDebInfo"
