@@ -22,18 +22,14 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://download.kde.org/stable/release-service/25.12.2/src/dragon-25.12.2.tar.xz",
-                    "sha256": "0558771a4ba544eb6159bd5d130e8e6044bab2956b417f67f6618242f3bda43b",
+                    "url": "https://download.kde.org/stable/release-service/25.12.3/src/dragon-25.12.3.tar.xz",
+                    "sha256": "3af4f7ef4b848ab6ee9a4169721c6c59d6cf19acd876619d647001a86d7ae4ce",
                     "x-checker-data": {
                         "type": "anitya",
                         "project-id": 236351,
                         "stable-only": true,
                         "url-template": "https://download.kde.org/stable/release-service/$version/src/dragon-$version.tar.xz"
                     }
-                },
-                {
-                    "type": "patch",
-                    "path": "0001-main-don-t-keep-the-engine-as-child-of-the-app.patch"
                 }
             ]
         }
