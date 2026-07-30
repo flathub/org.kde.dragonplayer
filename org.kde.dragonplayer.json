@@ -26,7 +26,7 @@
                     "sha256": "263fff59c7ef58cfe887bfae7c953ae223fce14be4f8556565b43adc7026799e",
                     "x-checker-data": {
                         "type": "anitya",
-                        "project-id": 236351,
+                        "project-id": 8763,
                         "stable-only": true,
                         "url-template": "https://download.kde.org/stable/release-service/$version/src/dragon-$version.tar.xz"
                     }
