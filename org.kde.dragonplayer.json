@@ -22,8 +22,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://download.kde.org/stable/release-service/26.04.3/src/dragon-26.04.3.tar.xz",
-                    "sha256": "263fff59c7ef58cfe887bfae7c953ae223fce14be4f8556565b43adc7026799e",
+                    "url": "https://download.kde.org/stable/release-service/26.08.1/src/dragon-26.08.1.tar.xz",
+                    "sha256": "0b0c153f3918a24a0c7aa35601466202bfdc8865f74e536194acf8c0d217dd33",
                     "x-checker-data": {
                         "type": "anitya",
                         "project-id": 8763,
